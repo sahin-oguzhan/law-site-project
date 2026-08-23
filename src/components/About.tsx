@@ -46,7 +46,7 @@ export default function About() {
         <div className="mt-8 sm:mt-10">
           <Link
             href="/hakkimizda"
-            className="inline-flex items-center justify-center bg-[#172230] px-9 py-3.5 text-xs font-medium tracking-wider text-white uppercase shadow-sm transition-colors hover:bg-[#233348]"
+            className="font-dmSans inline-flex items-center justify-center bg-[#172230] px-9 py-3.5 text-xs font-medium tracking-wider text-white uppercase shadow-sm transition-colors hover:bg-[#233348]"
           >
             Detaylı Bilgi
           </Link>
