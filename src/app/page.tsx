@@ -1,5 +1,6 @@
 import About from '@/components/About';
 import Hero from '@/components/Hero';
+import Lawyers from '@/components/Lawyers';
 import Navbar from '@/components/Navbar';
 import ServicesBanner from '@/components/ServicesBanner';
 
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <About />
       <ServicesBanner />
+      <Lawyers />
     </main>
   );
 }

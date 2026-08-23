@@ -34,6 +34,12 @@ export default function Navbar() {
             href="/"
             className="transition-colors hover:font-bold hover:text-[#1A2433]"
           >
+            Avukatlarımız
+          </Link>
+          <Link
+            href="/"
+            className="transition-colors hover:font-bold hover:text-[#1A2433]"
+          >
             Makaleler
           </Link>
           <Link
