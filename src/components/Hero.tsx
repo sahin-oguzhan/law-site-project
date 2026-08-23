@@ -3,20 +3,20 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="font-dmserif relative mx-auto flex h-[calc(100dvh-80px)] w-full max-w-[1600px] flex-col justify-center overflow-hidden px-6 lg:flex-row lg:items-center lg:px-12">
+    <section className="font-dmserif relative mx-auto flex w-full max-w-[1600px] flex-col justify-center px-6 pt-8 pb-16 lg:h-[calc(100dvh-80px)] lg:flex-row lg:items-center lg:overflow-hidden lg:px-12 lg:py-0">
       <div className="z-10 flex w-full shrink-0 flex-col items-center text-center lg:w-[48%] lg:items-start lg:gap-20 lg:text-left">
         <span className="font-dmSans mb-3 text-xs font-semibold tracking-widest text-[#A69B6D] uppercase lg:hidden">
           Hukuki Danışmanlık & Temsil
         </span>
 
-        <h1 className="text-[clamp(2.5rem,5.2vw,6.5rem)] leading-[0.98] tracking-tight text-[#1A2433]">
+        <h1 className="text-[clamp(2.2rem,6vw,6.5rem)] leading-[1.05] tracking-tight text-[#1A2433] lg:leading-[0.98]">
           <span className="block lg:whitespace-nowrap">Hak ve Adalet İçin</span>
           <span className="mt-2 block lg:mt-1 lg:whitespace-nowrap">
             <span className="text-[#A69B6D]">Sayın</span> Hukuk Bürosu
           </span>
         </h1>
 
-        <p className="font-dmSans mt-5 max-w-md text-sm leading-relaxed text-[#5A6578] sm:text-base lg:hidden">
+        <p className="font-dmSans mt-5 max-w-md text-sm leading-relaxed text-[#5A6578] lg:hidden">
           Müvekkillerimize şeffaf, sonuç odaklı ve güvenilir kurumsal
           danışmanlık ile dava takibi hizmeti sunuyoruz.
         </p>
