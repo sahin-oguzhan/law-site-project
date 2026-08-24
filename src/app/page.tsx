@@ -1,5 +1,6 @@
 import About from '@/components/About';
 import CTA from '@/components/CTA';
+import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import Lawyers from '@/components/Lawyers';
 import Navbar from '@/components/Navbar';
@@ -16,6 +17,7 @@ export default function Home() {
       <Lawyers />
       <CTA />
       <News />
+      <Footer />
     </main>
   );
 }
