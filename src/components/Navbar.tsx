@@ -88,6 +88,13 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
               className="transition-colors hover:font-bold hover:text-[#1A2433]"
             >
+              Avukatlarımız
+            </Link>
+            <Link
+              href="/"
+              onClick={() => setIsOpen(false)}
+              className="transition-colors hover:font-bold hover:text-[#1A2433]"
+            >
               Makaleler
             </Link>
             <Link
