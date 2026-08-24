@@ -1,53 +1,95 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+const heroContent = {
+  titlePart1: 'Hak ve Adalet İçin',
+  highlightText: 'Sayın',
+  titlePart2: 'Hukuk Bürosu',
+  buttonText: 'Danışmanlık Al',
+  buttonHref: '/iletisim',
+  imageSrc: '/hero.jpg',
+  imageAlt: 'Adalet Heykeli - Sayın Hukuk Bürosu',
+};
+
 export default function Hero() {
   return (
-    <section className="font-dmserif relative mx-auto flex w-full max-w-[1600px] flex-col justify-center px-6 pt-8 pb-16 lg:h-[calc(100dvh-80px)] lg:flex-row lg:items-center lg:overflow-hidden lg:px-12 lg:py-0">
-      <div className="z-10 flex w-full shrink-0 flex-col items-center text-center lg:w-[48%] lg:items-start lg:gap-20 lg:text-left">
-        <span className="font-dmSans mb-3 text-xs font-semibold tracking-widest text-[#A69B6D] uppercase lg:hidden">
-          Hukuki Danışmanlık & Temsil
-        </span>
+    <>
+      {/* Mobile & Tablet */}
+      <section className="font-dmserif relative mx-auto flex w-full max-w-5xl flex-col justify-center px-4 py-8 sm:px-8 sm:py-12 lg:hidden">
+        <div className="grid w-full grid-cols-1 items-center">
+          <div className="relative col-start-1 row-start-1 aspect-16/10 w-full overflow-hidden sm:aspect-16/8">
+            <Image
+              src={heroContent.imageSrc}
+              alt={heroContent.imageAlt}
+              fill
+              priority
+              className="object-cover object-right"
+              sizes="(max-width: 1024px) 100vw, 0px"
+            />
+          </div>
 
-        <h1 className="text-[clamp(2.2rem,6vw,6.5rem)] leading-[1.05] tracking-tight text-[#1A2433] lg:leading-[0.98]">
-          <span className="block lg:whitespace-nowrap">Hak ve Adalet İçin</span>
-          <span className="mt-2 block lg:mt-1 lg:whitespace-nowrap">
-            <span className="text-[#A69B6D]">Sayın</span> Hukuk Bürosu
-          </span>
-        </h1>
+          <div className="z-10 col-start-1 row-start-1 flex flex-col items-start p-4 sm:p-8">
+            <h1 className="text-[clamp(1.25rem,4.5vw,2.5rem)] leading-[1.08] tracking-tight text-[#1A2433]">
+              <span className="block whitespace-nowrap">
+                {heroContent.titlePart1}
+              </span>
+              <span className="mt-1 block whitespace-nowrap">
+                <span className="text-[#A69B6D]">
+                  {heroContent.highlightText}
+                </span>{' '}
+                {heroContent.titlePart2}
+              </span>
+            </h1>
 
-        <p className="font-dmSans mt-5 max-w-md text-sm leading-relaxed text-[#5A6578] lg:hidden">
-          Müvekkillerimize şeffaf, sonuç odaklı ve güvenilir kurumsal
-          danışmanlık ile dava takibi hizmeti sunuyoruz.
-        </p>
-
-        <div className="mt-8 flex w-full flex-col items-center justify-center gap-4 sm:w-auto sm:flex-row lg:mt-10 lg:justify-start">
-          <Link
-            href="/iletisim"
-            className="font-dmSans inline-flex w-full items-center justify-center bg-[#172230] px-9 py-4 text-xs font-medium tracking-wider text-white uppercase shadow-sm transition-colors hover:bg-[#233348] sm:w-auto"
-          >
-            Danışmanlık Al
-          </Link>
-          <Link
-            href="/calisma-alanlarimiz"
-            className="font-dmSans inline-flex w-full items-center justify-center border border-[#172230]/20 px-8 py-4 text-xs font-medium tracking-wider text-[#1A2433] uppercase transition-colors hover:bg-[#172230]/5 sm:w-auto lg:hidden"
-          >
-            Alanlarımız
-          </Link>
+            <div className="mt-4 flex w-auto flex-row items-center justify-start sm:mt-6">
+              <Link
+                href={heroContent.buttonHref}
+                className="font-dmSans inline-flex w-auto items-center justify-center bg-[#172230] px-4 py-2.5 text-[11px] font-medium tracking-wider text-white uppercase shadow-sm transition-colors hover:bg-[#233348] sm:px-6 sm:py-3 sm:text-xs"
+              >
+                {heroContent.buttonText}
+              </Link>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className="relative hidden h-full max-h-[75vh] flex-1 items-center justify-center lg:-ml-[18%] lg:flex xl:-ml-[22%]">
-        <Image
-          src="/hero.jpg"
-          alt="Adalet Heykeli - Sayın Hukuk Bürosu"
-          width={1392}
-          height={929}
-          priority
-          className="h-full max-h-[75vh] w-auto object-contain object-right"
-          sizes="(max-width: 1024px) 0px, 65vw"
-        />
-      </div>
-    </section>
+      {/* Desktop */}
+      <section className="font-dmserif relative mx-auto hidden h-[calc(100dvh-80px)] w-full max-w-[1600px] flex-row items-center overflow-hidden px-12 py-0 lg:flex">
+        <div className="z-10 flex w-[48%] shrink-0 flex-col items-start gap-20 text-left">
+          <h1 className="text-[clamp(2.2rem,6vw,6.5rem)] leading-[0.98] tracking-tight text-[#1A2433]">
+            <span className="block whitespace-nowrap">
+              {heroContent.titlePart1}
+            </span>
+            <span className="mt-1 block whitespace-nowrap">
+              <span className="text-[#A69B6D]">
+                {heroContent.highlightText}
+              </span>{' '}
+              {heroContent.titlePart2}
+            </span>
+          </h1>
+
+          <div className="mt-10 flex w-auto flex-row items-center justify-start">
+            <Link
+              href={heroContent.buttonHref}
+              className="font-dmSans inline-flex w-auto items-center justify-center bg-[#172230] px-9 py-4 text-xs font-medium tracking-wider text-white uppercase shadow-sm transition-colors hover:bg-[#233348]"
+            >
+              {heroContent.buttonText}
+            </Link>
+          </div>
+        </div>
+
+        <div className="relative -ml-[18%] flex h-full max-h-[75vh] flex-1 items-center justify-center xl:-ml-[22%]">
+          <Image
+            src={heroContent.imageSrc}
+            alt={heroContent.imageAlt}
+            width={1392}
+            height={929}
+            priority
+            className="h-full max-h-[75vh] w-auto object-contain object-right"
+            sizes="65vw"
+          />
+        </div>
+      </section>
+    </>
   );
 }
